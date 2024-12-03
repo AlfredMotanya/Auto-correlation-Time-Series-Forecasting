@@ -57,6 +57,7 @@ This project involves analyzing the monthly airline passenger data from 1949 to 
 Install the required libraries using pip:
 ```bash
 pip install numpy pandas matplotlib seaborn statsmodels scikit-learn
+```
 
 Running the Project
 Ensure you have an active Kaggle API token configured for kagglehub.
