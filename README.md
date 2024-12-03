@@ -5,13 +5,15 @@ This project involves analyzing the monthly airline passenger data from 1949 to 
 ## Project Structure
 
 ### 1. Data Import and Preprocessing
-- **Dataset:** The dataset is read from `AirPassengers.csv`.
-- **Columns:**
-  - `Date`: Date of observation (monthly data).
-  - `Number of Passengers`: Total passengers for the corresponding month.
-- **Preprocessing Steps:**
-  - Renamed columns for clarity.
-  - Converted the `Date` column to a datetime format for easier analysis.
+- **Dataset:** The dataset is downloaded dynamically from Kaggle.
+- **Code to Access Data:**
+  ```python
+  import kagglehub
+
+  # Download latest version
+  path = kagglehub.dataset_download("rakannimer/air-passengers")
+
+  print("Path to dataset files:", path)
 
 ### 2. Data Visualization
 - **Line Plot:**
@@ -48,9 +50,24 @@ This project involves analyzing the monthly airline passenger data from 1949 to 
 - `seaborn` – Enhanced data visualization.
 - `statsmodels` – Statistical models and time series analysis.
 - `sklearn` – Machine learning (linear regression).
+- `kagglehub` – Kaggle dataset downloader.
 - `dateutil` – Date parsing utilities.
 
 ### Installation
 Install the required libraries using pip:
 ```bash
 pip install numpy pandas matplotlib seaborn statsmodels scikit-learn
+
+Running the Project
+Ensure you have an active Kaggle API token configured for kagglehub.
+Execute the script in a Python environment (e.g., Jupyter Notebook, PyCharm).
+Review the visualizations and analysis outputs.
+Key Visuals and Outputs
+Trends and Patterns: Visualized through line plots.
+Decomposition: Highlights trend and seasonal components.
+Autocorrelation and PACF: Provide insights into seasonality and lag effects.
+Insights and Applications
+Identify and analyze trends and seasonal variations in airline passenger data.
+Form the basis for predictive modeling and forecasting.
+Acknowledgments
+Dataset Source: Air Passengers Dataset on Kaggle
